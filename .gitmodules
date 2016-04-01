@@ -1,0 +1,3 @@
+[submodule "AsyncCLI"]
+	path = AsyncCLI
+	url = https://github.com/pbsds/AsyncCLI
