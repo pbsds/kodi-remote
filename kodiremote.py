@@ -3,6 +3,7 @@
 import sys, os
 from getpass import getuser
 from subprocess import call
+
 import AsyncCLI.getch as getch
 getch.WORDS[getch.k_Enter] = "Return"
 getch.WORDS[getch.k_Backspace] = "BackSpace"
@@ -38,12 +39,13 @@ def main():
 if __name__ == "__main__":
 	if not os.access(os.path.join(os.path.expanduser("~kodi"), ".Xauthority"), os.R_OK):
 		print "No access to kodi's Xauthority file!"
-		print "Must be either be root or the kodi user (you're %s), or run this command as kodi or root once:" % getuser()
+		print "Must be either root or the kodi user (you're %s), or run this command once:" % getuser()
 		print "chmod o+r", os.path.join(os.path.expanduser("~kodi"), ".Xauthority")
-		print "as root or kodi."
+		print "as either root or kodi."
 	else:
 		if "-v" in sys.argv[1:]:
 			VERBOSE = True
+		
 		main()
 
 
