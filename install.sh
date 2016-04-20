@@ -7,5 +7,5 @@ cd AsyncCLI
 python setup.py install
 cd ..
 
-ln -s kodiremote.py /usr/local/bin/kodiremote
-ln -s kodix.py /usr/local/bin/kodix
+cp kodiremote.py /usr/local/bin/kodiremote
+cp kodix.py /usr/local/bin/kodix
